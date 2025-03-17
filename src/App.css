@@ -1,38 +1,264 @@
-.App {
+/* General Styles */
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+} */
+
+/* Navbar Styles */
+/* .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0a0a3e;
+  color: white;
+  padding: 15px 30px;
+} */
+
+/* Logo */
+/* .logo img {
+  width: 120px; /* Adjust logo size 
+  height: auto;
+} */
+
+/* Navigation Links */
+/* .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Increased spacing between links */
+  /* font-size: 16px; */
+/* }  */
+
+/* .nav-links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+} */
+
+/* .nav-links li:hover {
+  color: #ffcc00; 
+} */
+
+/* Right Side (Search + Account Icon) */
+/* .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+} */
+
+/* Search Bar */
+/* .search-container {
+  display: flex;
+  align-items: center;
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+} */
+
+/* .search-container input {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  width: 200px; 
+  outline: none;
+} */
+
+/* .search-container button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+} */
+
+/* Account Icon */
+/* .account-icon {
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+} */
+/* 
+.account-icon:hover {
+  color: #ffcc00;
+} */
+
+/* Hero Section */
+/* .hero {
+  background-image: url('https://via.placeholder.com/1500x500');
+  background-size: cover;
+  background-position: center;
   text-align: center;
+  padding: 100px 0;
+  color: #0a0a3e;
+  font-size: 30px;
+  font-weight: bold;
+} */
+
+/* About Us Section */
+/* .about {
+  text-align: center;
+  padding: 50px;
+  background-color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.card {
+  background-color: #e6e6e6;
+  padding: 20px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+} */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Contact Us Section */
+/* .contact {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+} */
+
+/* .contact-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 15px;
+} */
+
+/* .input-group {
+  display: flex;
+  gap: 15px;
+}
+
+.input-group input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+button {
+  background-color: #0a0a3e;
   color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+} */
+
+/* Footer */
+/* .footer {
+  background-color: #0a0a3e;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.footer-content {
+  display: flex;
+  justify-content: space-around;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.footer h3 {
+  margin-bottom: 10px;
+}
+.footer {
+  background-color: #000e54;
+  color: white;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-text {
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.footer-copy {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.payment-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.payment-logo {
+  width: 40px;
+  height: auto;
+} */
+
+/* .footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; 
+} */
+
+/* Responsive Design */
+/* @media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+
+  .payment-icons {
+    justify-content: center;
+  }
+} */

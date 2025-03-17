@@ -1,0 +1,543 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  overflow-y: auto; /* Enables scrolling */
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.post-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-y: auto; /* Allow scrolling */
+
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  box-sizing: border-box;
+  background-color: #0c0c44; /* Ensure navbar has a background */
+  height: 100px; /* Set a fixed height */
+  display: flex;
+  align-items: center;
+}
+
+/* Add padding to prevent content from being hidden under navbar */
+.content {
+  display: flex;
+  padding: 40px;
+  flex: 1;
+  max-width: 100%;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+  padding-top: 142px; /* Adjust to match the navbar height + some spacing */
+}
+
+.add-post-container {
+  position: absolute;
+  top: 120px; /* Adjust to keep it above filters */
+  left: 20px;
+  z-index: 10;
+}
+
+.add-post-button {
+  background-color: #0c0c44;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 180px; /* Adjust width as needed */
+}
+
+.add-post-button:hover {
+  background-color: #1a1a6e;
+}
+.add-post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 20px; /* Adjust this value to move it down */
+}
+
+
+
+
+.posts {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr)); 
+  gap: 20px;
+  align-items: start;
+  max-width: 100%;
+  /* overflow-x: hidden; */
+  min-height: 300px;
+}
+
+
+@media (max-width: 1024px) {
+  .posts {
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Two posts per row for medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: repeat(1, minmax(300px, 1fr)); /* One post per row for small screens */
+  }
+}
+
+
+.post {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 240px;
+  background: white;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* overflow: hidden; */
+  max-width: 100%;
+  box-sizing: border-box;
+  max-width:350px;
+}
+
+.post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.filters {
+  position: fixed;
+  width: 200px;
+  /* background: white; */
+  padding: 0px;
+  /* border-radius: 8px; */
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  /* box-sizing: border-box; */
+  position: sticky;
+  top: 100px; /* Keeps it fixed while scrolling */
+  align-self: flex-start; /* Moves filter section to the top */
+}
+
+footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+/* Background overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal container */
+.add-post-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 60%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Close button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Form title */
+.form-title {
+  color: #0c0c44;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* Two-column layout */
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Column widths */
+.left-column,
+.right-column {
+  width: 48%;
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Input field */
+.input-field {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+}
+
+/* Textarea */
+.textarea-field {
+  background: #f0f0f0;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  height: 80px;
+  resize: none;
+}
+
+/* File Upload Box */
+.file-upload {
+  background: #f0f0f0;
+  padding: 40px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #666;
+}
+
+/* Submit button */
+.button-container {
+  text-align: right;
+}
+
+.submit-button {
+  background-color: #0c0c44;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-button:hover {
+  background-color: #1a1a6e;
+}
+
+/* Add New Post Button */
+.add-post-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.add-post-button {
+  background-color: #0c0c44;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.add-post-button:hover {
+  background-color: #1a1a6e;
+}
+/* Error messages in red color */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+.left-column, .right-column {
+  padding: 10px; /* Adds space inside the columns */
+}
+.form-group {
+  margin-bottom: 20px; /* Adjust spacing as needed */
+}
+/* Ensure all input fields and textareas have consistent width */
+.input-field,
+.textarea-field {
+  width: 100%; /* Make them fill their container */
+  padding: 10px; 
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Set a fixed height for text areas on the right */
+.right-column .textarea-field {
+  height: 100px; /* Adjust height as needed */
+}
+
+/* Set a fixed height for input fields on the left */
+.left-column .input-field {
+  height: 40px; /* Adjust height as needed */
+}
+
+/* Ensure both columns have equal width */
+.form-container {
+  display: flex;
+  gap: 20px; /* Space between columns */
+}
+
+/* Ensure left and right columns take equal space */
+.left-column, .right-column {
+  flex: 1;
+}
+/* Ensure content does not get hidden behind the navbar */
+
+
+/* Make posts stack properly on mobile */
+@media (max-width: 768px) {
+  .posts {
+    grid-template-columns: 1fr; /* Single-column layout */
+    gap: 15px;
+  }
+  
+  .post {
+    max-width: 100%;
+    padding: 20px; /* Reduce padding for better space */
+  }
+
+  .add-post-container {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100px; /* Adjust positioning */
+  }
+
+  .add-post-button {
+    width: 100%; /* Full width button */
+    font-size: 14px;
+    padding: 8px;
+  }
+  
+  .filters {
+    position: relative; /* Remove fixed positioning */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
+/* Ensure forms adapt properly */
+@media (max-width: 600px) {
+  .add-post-form {
+    width: 90%; /* Reduce width for small screens */
+    padding: 20px;
+  }
+
+  .form-container {
+    flex-direction: column; /* Stack inputs */
+  }
+
+  .left-column, .right-column {
+    width: 100%; /* Make both columns full width */
+  }
+
+  .input-field,
+  .textarea-field {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    width: 100%; /* Make submit button full width */
+    padding: 12px;
+  }
+}
+
+/* Footer: Center content & reduce padding */
+footer {
+  font-size: 14px;
+  padding: 10px;
+}
+/* Mobile responsiveness for filters */
+@media (max-width: 768px) {
+  .filters {
+    position: relative; /* Remove fixed/sticky positioning */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filters select {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile responsiveness for forms */
+@media (max-width: 768px) {
+  .add-post-form {
+    width: 95%; /* Make the form take almost full width */
+    padding: 20px;
+  }
+
+  .form-container {
+    flex-direction: column; /* Stack inputs vertically */
+    gap: 10px; /* Reduce gap for better spacing */
+  }
+
+  .left-column, .right-column {
+    width: 100%; /* Make both columns take full width */
+  }
+
+  .input-field,
+  .textarea-field {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submit-button {
+    width: 100%; /* Ensure full-width button */
+    padding: 12px;
+  }
+}
+
+/* Improve the form layout for extra small screens */
+@media (max-width: 480px) {
+  .add-post-form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .input-field,
+  .textarea-field {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .submit-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+.poverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.post-popup {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+}
+
+/* Close button (Top Right) */
+.pclose-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Like button (Right side, below close button) */
+.like-button {
+  font-size: 24px;
+  color: white; /* Default color */
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 340px;
+  right: 20px; /* Positioned next to the close button */
+  transition: color 0.3s;
+}
+
+/* Change color when clicked */
+.like-button.liked {
+  color: yellow;
+}
+.review-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #0c0c44;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s;
+}
+
+.review-button:hover {
+  background-color: #1a1a6e;
+}
+
+.post-popup img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+
+
