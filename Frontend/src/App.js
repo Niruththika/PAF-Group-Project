@@ -151,6 +151,7 @@ import PostPage from "./pages/postpage";
 import "./style/login.css"; 
 import "./style/signup.css"; 
 import CommentPage from "./pages/comment";
+import Learning from "./pages/learning";
 
 // function App() {
 //   return (
@@ -163,13 +164,13 @@ import CommentPage from "./pages/comment";
 //   );
 // }
 
-// function App() {
-//   return (
-//     <div className="App">
-//       <PostPage />
-//     </div>
-//   );
-// }
+function App() {
+   return (
+     <div className="Footer">
+       <Learning />
+     </div>
+   );
+ }
 
 function App() {
   return (
