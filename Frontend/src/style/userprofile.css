@@ -1,0 +1,479 @@
+/* UserProfile.css */
+.container {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14124f;
+    color: white;
+  }
+  .logo img {
+    width: 100px;
+    height: auto;
+}
+.logo {
+    flex-shrink: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: -20px;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    width: 300px; /* Adjust the width of the search bar */
+  }
+  
+  .search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 100%; /* This ensures the input takes up the available space */
+  }
+  
+  .search-bar .icon {
+    margin-left: 10px; /* Adds some space between the input field and the icon */
+    color: #000; /* You can adjust the color of the icon if needed */
+  }
+  
+  .icon {
+    margin-right: 60px; /* Moves the icon slightly to the right */
+    font-size: 24px; /* Adjusts the size of the icon, you can increase/decrease this value */
+    color: #ffffff; /* You can adjust the color if needed */
+  }
+  
+  .pcontainer {
+    display: flex;
+    justify-content: space-between; /* Align left and right */
+    align-items: flex-start; /* Align items at the top */
+    width: 90vw;
+    max-width: 1500px;
+    margin: auto;
+    padding: 40px;
+    padding-top: 120px;
+}
+
+/* Profile Card: Two-column Layout */
+/* Profile Card: Two-column Layout */
+.profile-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Left Section: Avatar */
+.profile-avatar {
+  width: 30%; /* Adjust size */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* User Icon */
+.user-icon {
+  font-size: 30px; /* Increase the size of the icon */
+  color: #ffffff;
+  margin-right: 40px;
+}
+
+.user-icons {
+  font-size: 130px; /* Increase the size of the icon */
+  color: #14124f;
+  margin-right: 40px;
+}
+
+/* Right Section: User Details */
+.profile-details {
+  width: 65%; /* Adjust size */
+}
+
+/* User Role Text */
+.user-role {
+  font-size: 16px;
+  color: #777;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .profile-avatar, .profile-details {
+      width: 100%;
+  }
+}
+
+
+.profile-section {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Left Section */
+.left-container {
+    width: 45%; /* Adjust width to fit both containers */
+}
+
+/* Right Section */
+.right-container {
+    width: 45%;
+}
+
+/* Common Card Styling */
+.profile-card,
+.course-progress-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .pcontainer {
+        flex-direction: column;
+    }
+    .left-container, .right-container {
+        width: 100%;
+    }
+}
+
+  .profile-header h2 {
+    font-size: 24px; /* Increase heading size */
+  }
+  
+  .profile-details p {
+    font-size: 18px; /* Increase text size */
+  }
+  
+  
+  .profile-icon {
+    font-size: 50px;
+    color: #14124f;
+  }
+  
+  .profile-details p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+  
+  .edit-icon {
+    cursor: pointer;
+    color: #14124f;
+  }
+  
+ /* Course Progress Card: Two-column Layout */
+.course-progress-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Left Section: Course Progress */
+.course-progress {
+  width: 60%;
+}
+
+/* Right Section: Course Notifications */
+.course-notifications {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: -20px; /* Move it upwards */
+}
+
+
+/* Notification Button Styling */
+.notification {
+  display: block;
+  background: #eee;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #ddd;
+  margin: 10px 0;
+}
+
+.progress {
+  height: 100%;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+.course-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #14124f;
+  margin-bottom: 10px; /* Adds spacing between course name and progress bar */
+  text-align: left
+}
+.learning-progress-heading {
+  color: #14124f; /* Blue color */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .course-progress-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .course-progress, .course-notifications {
+      width: 100%;
+  }
+}
+
+  
+  .course-notifications {
+    margin-top: 20px;
+  }
+  
+  .notification {
+    display: block;
+    background: #eee;
+    padding: 8px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .follow-notify-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .followers, .following, .notifications {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 30%;
+  }
+  
+  .posts-container {
+    margin-top: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .post h4 {
+    margin: 0;
+    color: #14124f;
+  }
+
+  /* follewers and Notifications */
+  .social-container {
+    display: flex;
+    gap: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-family: Arial, sans-serif;
+}
+
+.followers-following {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+}
+
+.followers,
+.following {
+    padding: 10px;
+    width: 45%;
+}
+
+/* Grid layout: Two columns with three users in each */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 10px;
+  justify-content: flex-start;
+  margin-right: 50px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.user-card {
+display: flex;
+align-items: center;
+gap: 10px;
+padding: 10px;
+background: #f8f8f8;
+border-radius: 8px;
+justify-content: flex-start; /* Align the content to the left */
+width: 100%; /* Ensure full width to allow proper spacing */
+}
+
+.avatar {
+width: 40px;
+height: 40px;
+background-color: #2c3e50;
+border-radius: 50%;
+margin-right: 10px; /* Space between avatar and name */
+}
+
+.name {
+flex-grow: 1; /* This will push the name to the right */
+text-align: left;
+}
+
+
+  .notifications {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .delete-btn,
+  .like-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+ /* Outer container */
+.outbox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Moves content up */
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 50vh;
+}
+
+/* Flex container for horizontal alignment with wrapping */
+.container-horizontal {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping */
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  max-width: 1200px;
+ padding: 10px;
+}
+
+/* Card styles */
+.card {
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 16px;
+  width: 280px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Card title styling */
+.card-title {
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Image styling */
+.card-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Card content text */
+.card-content {
+  color: #555;
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* Highlighted text */
+.card-highlight {
+  color: red;
+  font-weight: bold;
+  margin-top: 8px;
+}
