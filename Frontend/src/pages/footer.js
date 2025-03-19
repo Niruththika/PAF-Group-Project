@@ -11,7 +11,6 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* About Section */}
         <div className="footer-about">
           <p>
             A Skill-Sharing & Learning Platform where users can share skills
@@ -28,7 +27,6 @@ const Footer = () => {
           <p className="footer-copy">Shop.co © 2000-2023, All Rights Reserved</p>
         </div>
 
-        {/* Quick Links */}
         <div className="footer-links">
           <h4>QUICK LINKS</h4>
           <ul>
@@ -39,7 +37,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Help Section */}
         <div className="footer-help">
           <h4>H E L P</h4>
           <ul>
@@ -50,7 +47,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* FAQ Section */}
         <div className="footer-faq">
           <h4>FAQ</h4>
           <ul>
@@ -61,7 +57,6 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Info */}
         <div className="footer-contact">
           <h4>CONTACT INFO</h4>
           <p>Phone : 08893998948</p>
