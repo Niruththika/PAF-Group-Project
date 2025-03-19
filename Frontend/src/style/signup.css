@@ -1,5 +1,3 @@
-/* Importing Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&display=swap');
 
 body {
     font-family: Arial, sans-serif;
@@ -8,12 +6,10 @@ body {
     background-color: #ffffff;
 }
 
-/* Container */
 .container {
     text-align: center;
 }
 
-/* Header */
 .header {
     background-color: #0c0c44;
     color: white;
@@ -24,20 +20,17 @@ body {
     margin-top: -25px;;
 }
 
-/* Logo */
 .logo img {
-    width: 80px; /* Adjust logo size */
+    width: 80px; 
     height: auto;
 }
 
-/* Header Text */
 h1 {
     flex-grow: 1;
     text-align: center;
     font-size: 48px;
 }
 
-/* Content Layout */
 .content {
     display: flex;
     justify-content: flex-start;
@@ -46,7 +39,6 @@ h1 {
     padding-left: 60px;
 }
 
-/* Signup Box */
 .signup-box {
     background: white;
     padding: 40px;
@@ -57,12 +49,10 @@ h1 {
     margin-right: 50px;
 }
 
-/* Signup Heading */
 h2 {
     color: #0c0c44;
 }
 
-/* Input Fields */
 .input-box {
     width: 90%;
     padding: 12px;
@@ -71,7 +61,6 @@ h2 {
     border-radius: 5px;
 }
 
-/* Signup Button */
 .signup-btn {
     background-color: #0c0c44;
     color: white;
@@ -86,7 +75,6 @@ h2 {
     background-color: #13135d;
 }
 
-/* Login Link */
 p {
     font-size: 14px;
 }
@@ -96,7 +84,6 @@ p a {
     text-decoration: none;
 }
 
-/* Illustration */
 .illustration img {
     width: 100%;
     max-width: 700px;

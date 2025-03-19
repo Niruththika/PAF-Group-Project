@@ -7,7 +7,6 @@
     text-align: left;
 }
 
-/* Footer Container - Desktop */
 .footer-container {
     display: flex;
     justify-content: flex-start;
@@ -17,7 +16,6 @@
     gap: 60px;
 }
 
-/* Footer Sections */
 .footer-about,
 .footer-links,
 .footer-help,
@@ -27,13 +25,11 @@
     min-width: 150px;
 }
 
-/* Footer Headings */
 .footer h4 {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
-/* Footer List */
 .footer ul {
     list-style: none;
     padding: 0;
@@ -44,7 +40,6 @@
     cursor: pointer;
 }
 
-/* Contact Info */
 .footer-contact p {
     margin: 12px 0;
     font-size: 14px;
@@ -59,7 +54,6 @@
     text-decoration: underline;
 }
 
-/* Payment Icons */
 .footer-payment {
     display: flex;
     gap: 20px;
@@ -71,15 +65,12 @@
     height: auto;
 }
 
-/* ================= */
-/* MOBILE RESPONSIVENESS */
-/* ================= */
 
 @media (max-width: 768px) {
     .footer-container {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; 
         text-align: left;
-        gap: 30px; /* Reduce spacing */
+        gap: 30px; 
     }
 
     .footer-about,
@@ -87,24 +78,23 @@
     .footer-help,
     .footer-faq,
     .footer-contact {
-        width: 100%; /* Make each section full width */
+        width: 100%; 
     }
 
     .footer-payment {
-        justify-content: center; /* Center payment icons */
+        justify-content: center; 
         gap: 15px;
     }
 
     .footer-payment img {
-        width: 40px; /* Reduce size for smaller screens */
+        width: 40px; 
     }
 }
 
-/* Smaller Mobile Screens */
 @media (max-width: 480px) {
     .footer {
         padding: 15px;
-        font-size: 12px; /* Reduce font size for better fit */
+        font-size: 12px; 
     }
 
     .footer h4 {
