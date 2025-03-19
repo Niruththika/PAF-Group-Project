@@ -1,0 +1,63 @@
+.ccontainer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    padding-top: 100px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h2 {
+    color: #2c3e50;
+  }
+  
+  .cform-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .cinput, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .cinput-field {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .cinput-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  
+  
+  cbutton {
+    padding: 10px;
+    background: #0c0c44;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .cbutton:hover {
+    background: #14124f;
+  }
+  
+  .cerror {
+    color: red;
+    font-size: 12px;
+    text-align: left;
+  }
