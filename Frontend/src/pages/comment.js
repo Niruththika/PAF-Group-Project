@@ -6,6 +6,7 @@ import "../style/comment.css";
 import Footer from "./footer";
 import { FaSearch, FaUser } from "react-icons/fa";
 import edulogo from "../images/edulogo.png";
+import Header from "./header";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name is required"),
@@ -34,29 +35,7 @@ const LearningJourneyForm = () => {
 
   return (
     <div>
-      {/* Header Section */}
-      
-        <nav className="navbar">
-          <div className="logo">
-            <img src={edulogo} alt="EduFlow Logo" width="100" />
-          </div>
-          <ul className="nav-links">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Contact Us</li>
-            <li>Posts</li>
-            <li>Plans</li>
-            <li>Progress</li>
-          </ul>
-          <div className="search-bar">
-            <input type="text" placeholder="Search for courses..." />
-            <FaSearch className="search-icon" />
-          </div>
-          <FaUser className="user-icon" />
-        </nav>
-   
-
-      {/* Learning Journey Form */}
+        <Header/>
       <div className="ccontainer">
         <h2>Tracking Your Learning Journey</h2>
         <p>Track and share your learning journey with the community!</p>
@@ -85,7 +64,6 @@ const LearningJourneyForm = () => {
           <cbutton type="submit">Post Update</cbutton>
         </form>
 
-        {/* Display Comments */}
         <div className="ccomments-section">
           <h3>Recent Comments</h3>
           {comments.length === 0 ? (
