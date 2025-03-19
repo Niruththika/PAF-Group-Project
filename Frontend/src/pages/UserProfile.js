@@ -1,11 +1,12 @@
 import React from "react";
 import "../style/userprofile.css";
 import { FaSearch, FaUser, FaEdit ,FaUserCircle} from "react-icons/fa";
-import edulogo from "../images/edulogo.png"; // Adjust the path based on your structure
-import image1 from '../images/1.png';  // Correct the path to the image
-import image2 from '../images/2.png';  // If you have another image
-import image3 from '../images/3.png';  // Another example
+import edulogo from "../images/edulogo.png"; 
+import image1 from '../images/1.png';  
+import image2 from '../images/2.png';  
+import image3 from '../images/3.png';  
 import Footer from "./footer";
+import Header from "./header";
 
 
 const users = [
@@ -57,25 +58,7 @@ const NotificationItem = ({ text }) => (
 const UserProfile = () => {
   return (
     <div className="container">
-      <nav className="navbar">
-        <div className="logo">
-          <img src={edulogo} alt="EduFlow Logo" width="100" />
-        </div>
-        <ul className="nav-links">
-          <li>Home</li>
-          <li>AboutUs</li>
-          <li>ContactUs</li>
-          <li>Posts</li>
-          <li>Plans</li>
-          <li>Progress</li>
-        </ul>
-
-        <div className="search-bar">
-          <input type="text" placeholder="Search for courses..." />
-          <FaSearch className="search-icon" />
-        </div>
-        <FaUser className="user-icon" />
-      </nav>
+     <Header />
 
 
 {/* profile */}
