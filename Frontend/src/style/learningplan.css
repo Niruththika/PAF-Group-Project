@@ -1,0 +1,111 @@
+.learning-plan-container-123 {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    padding-top: 150px;
+  }
+  
+  .banner-123 {
+    background-color: #14124f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .banner-content-123 h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .banner-content-123 p {
+    font-size: 14px;
+  }
+  
+  .form-container-123 {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+  
+  .form-group-123 {
+    margin-bottom: 15px;
+  }
+  
+  .form-input-123,
+  .form-textarea-123 {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .form-textarea-123 {
+    resize: vertical;
+    height: 80px;
+  }
+  
+  .dropdown-input-123 {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .dropdown-arrow-123 {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .dropdown-menu-123 {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 150px;
+    overflow-y: auto;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .dropdown-item-123 {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item-123:hover {
+    background: #f0f0f0;
+  }
+  
+  .save-option-123 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-buttons-123 {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .post-button-123,
+  .edit-button-123 {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .post-button-123 {
+    background-color: #14124f;
+    color: white;
+  }
+  
+  .edit-button-123 {
+    background-color: red;
+    color: white;
+  }
