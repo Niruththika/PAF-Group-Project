@@ -4,16 +4,31 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "../style/comment.css";
 import Footer from "./footer";
-import { FaSearch, FaUser } from "react-icons/fa";
-import edulogo from "../images/edulogo.png";
 import Header from "./header";
 
+// ✅ Updated validation schema
 const schema = yup.object().shape({
-  name: yup.string().required("Name is required"),
-  email: yup.string().email("Invalid email").required("Email is required"),
+  name: yup
+    .string()
+    .matches(/^[A-Za-z\s]+$/, "Name must contain only letters and spaces")
+    .min(3, "Name must be at least 3 characters long")
+    .required("Name is required"),
+  
+  email: yup
+    .string()
+    .email("Invalid email format")
+    .required("Email is required"),
+  
   tutorial: yup.string().required("Please select a tutorial"),
-  progress: yup.string().required("Progress update is required"),
-  tags: yup.string().required("Please add at least one tag"),
+  
+  progress: yup
+    .string()
+    .min(10, "Progress update must be at least 10 characters long")
+    .required("Progress update is required"),
+  
+  tags: yup
+    .string()
+    .required("Please add at least one tag"),
 });
 
 const LearningJourneyForm = () => {
@@ -35,17 +50,31 @@ const LearningJourneyForm = () => {
 
   return (
     <div>
-        <Header/>
+      <Header />
       <div className="ccontainer">
         <h2>Tracking Your Learning Journey</h2>
         <p>Track and share your learning journey with the community!</p>
+
         <form onSubmit={handleSubmit(onSubmit)} className="cform-container">
-          <input type="text" placeholder="Name*" {...register("name")} className="cinput-field" />
+          {/* Name Field */}
+          <input 
+            type="text" 
+            placeholder="Name*" 
+            {...register("name")} 
+            className="cinput-field" 
+          />
           <p className="cerror">{errors.name?.message}</p>
 
-          <input type="email" placeholder="Email*" {...register("email")} className="cinput-field" />
+          {/* Email Field */}
+          <input 
+            type="email" 
+            placeholder="Email*" 
+            {...register("email")} 
+            className="cinput-field" 
+          />
           <p className="cerror">{errors.email?.message}</p>
 
+          {/* Tutorial Selection */}
           <select {...register("tutorial")} className="cinput-field">
             <option value="">Select Completed Tutorial</option>
             <option value="Power BI">Power BI</option>
@@ -54,16 +83,28 @@ const LearningJourneyForm = () => {
           </select>
           <p className="cerror">{errors.tutorial?.message}</p>
 
-          <textarea placeholder="Enter your latest progress update..." {...register("progress")} className="cinput-field" />
+          {/* Progress Update */}
+          <textarea 
+            placeholder="Enter your latest progress update..." 
+            {...register("progress")} 
+            className="cinput-field" 
+          />
           <p className="cerror">{errors.progress?.message}</p>
 
-          <input type="text" placeholder="Add Tags" {...register("tags")} className="cinput-field" />
+          {/* Tags Field */}
+          <input 
+            type="text" 
+            placeholder="Add Tags" 
+            {...register("tags")} 
+            className="cinput-field" 
+          />
           <p className="cerror">{errors.tags?.message}</p>
 
-
-          <cbutton type="submit">Post Update</cbutton>
+          {/* Submit Button */}
+          <button type="submit" className="csubmit-btn">Post Update</button>
         </form>
 
+        {/* Comments Section */}
         <div className="ccomments-section">
           <h3>Recent Comments</h3>
           {comments.length === 0 ? (
