@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useState } from "react";
 import "../style/userprofile.css";
 import { FaSearch, FaUser, FaEdit ,FaUserCircle} from "react-icons/fa";
 import edulogo from "../images/edulogo.png"; 
@@ -9,6 +9,7 @@ import Footer from "./footer";
 import Header from "./header";
 
 
+
 const users = [
   { name: "Abiramy" },
   { name: "Mathusigan" },
@@ -17,6 +18,8 @@ const users = [
   { name: "Sutharsan" },
   { name: "Divya" },
 ];
+
+
 
 const UserCard = ({ name }) => (
   <div className="user-card">
@@ -55,70 +58,125 @@ const NotificationItem = ({ text }) => (
   </div>
 );
 
+
+
 const UserProfile = () => {
+  // State for Profile Information
+  const [user, setUser] = useState({
+    name: "Niruththika Erambanathan",
+    email: "niruththihaz7@gmail.com",
+    password: "N1234567",
+  });
+
+  // State for Modal Visibility
+  const [isEditing, setIsEditing] = useState(false);
+  
+  // State to Store Form Input
+  const [formData, setFormData] = useState(user);
+
+  // Handle Input Change
+  const handleInputChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle Form Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setUser(formData); 
+    setIsEditing(false); 
+  };
+
   return (
+    <>
+        <Header />
     <div className="container">
-     <Header />
 
-
-{/* profile */}
       <div className="pcontainer">
         <div className="profile-section">
         <div className="profile-card">
-  {/* Left Section: User Avatar */}
+ 
   <div className="profile-avatar">
     <FaUserCircle className="user-icons" />
     <h2>User Profile</h2>
   </div>
 
-  {/* Right Section: User Details */}
+  
   <div className="profile-details">
-    <p>
-      <strong>Name:</strong> Niruththika Erambanathan <FaEdit className="edit-icon" />
-    </p>
-    <p>
-      <strong>Email:</strong> niruththihaz7@gmail.com <FaEdit className="edit-icon" />
-    </p>
-    <p>
-      <strong>Password:</strong> N1234567 <FaEdit className="edit-icon" />
-    </p>
-  </div>
+  <p><strong>Name:</strong> {user.name}</p>
+  <p><strong>Email:</strong> {user.email}</p>
+  <p><strong>Password:</strong> *******</p> {/ Hide actual password for security */}
+  
+  <FaEdit className="edit-icon" onClick={() => setIsEditing(true)} /> {/* Single Edit Button */}
 </div>
 
-{/* Learning progress and updates */}
+
+{isEditing && (
+  <div className="modal-overlay" onClick={() => setIsEditing(false)}>
+    <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+      <h2>Edit Profile</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Name:</label>
+        <input type="text" name="name" value={formData.name} onChange={handleInputChange} />
+
+        <label>Email:</label>
+        <input type="email" name="email" value={formData.email} onChange={handleInputChange} />
+
+        <label>Password:</label>
+        <input type="password" name="password" value={formData.password} onChange={handleInputChange} />
+
+        <button type="submit">Save Changes</button>
+        <button type="button" onClick={() => setIsEditing(false)}>Cancel</button>
+      </form>
+    </div>
+  </div>
+)}
+
+</div>
+
+
 <div className="course-progress-card">
-  {/* Left Section: Course Progress */}
+ 
   <div className="course-progress">
     <h3 className="learning-progress-heading">Learning Progress</h3>
-  <p className="course-name">Python Course</p>
+    
+    <p className="course-name">Python Course</p>
     <div className="progress-bar">
       <div className="progress green" style={{ width: "70%" }}></div>
       <div className="progress red" style={{ width: "30%" }}></div>
     </div>
+
     <p className="course-name">Icing Course</p>
     <div className="progress-bar">
       <div className="progress green" style={{ width: "40%" }}></div>
       <div className="progress red" style={{ width: "60%" }}></div>
     </div>
+
     <p className="course-name">Tailoring Course</p>
     <div className="progress-bar">
       <div className="progress green" style={{ width: "85%" }}></div>
       <div className="progress red" style={{ width: "15%" }}></div>
     </div>
+
+   
+    <div className="add-new-container">
+      <button className="add-new-btn">+ Add New</button>
+    </div>
   </div>
 
-  {/* Right Section: Course Notifications */}
+
+ 
   <div className="course-notifications">
-  <h3 className="learning-progress-heading">Learning New Updates</h3>
+    <h3 className="learning-progress-heading">Learning New Updates</h3>
     <button className="notification">Icing Course is in Live ✖</button>
     <button className="notification">Added new React Course ✖</button>
   </div>
 </div>
 
+
         </div>
       </div>
 
-    {/* followers and Notifications */}
+    
       <div className="social-container">
       <div className="followers-following">
       <div className="followers">
@@ -154,32 +212,10 @@ const UserProfile = () => {
         ))}
       </div>
     </div>
-    <div className="outbox">
-      <div className="container-horizontal">
-        <Card
-          title="Learn JavaScript in 5 Minutes – A Beginner’s Guide"
-          image={image1}
-          content="Master the basics of JavaScript, from variables to functions, with this quick and easy guide! Steps: 1. Understanding Variables 2. Writing Functions 3. Loops & Conditions"
-          highlight="Save this post & start coding today!"
-        />
-        <Card
-          title="How to Make the Perfect Pancakes – Quick & Easy!"
-          image={image2}
-          content="Ingredients List: • 1 cup flour • 1 egg • ½ cup milk Step-by-Step Instructions: 1. Mix all ingredients. 2. Heat the pan and pour the batter. 3. Flip when bubbles form"
-          highlight="Try this recipe & tag us in your pancake pics!"
-        />
-        <Card
-          title="Lighting Trick: The Golden Hour Effect!"
-          image={image3}
-          content="Tip: 'The golden hour (right after sunrise & before sunset) gives warm, soft light for stunning photos!' Bonus Suggestion: 'Try using a 45-degree angle for the best natural light.'"
-          highlight="Tag a friend who needs to know this!"
-        />
-        
-      </div>
-    </div>
-
+   
     <Footer/>
     </div>
+    </>
   );
 };
 
