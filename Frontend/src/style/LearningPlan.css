@@ -1,0 +1,250 @@
+/* LearningPlan.css */
+
+.lpl__container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Arial', sans-serif;
+  background-color: #ffffff;
+  padding-top: 200px;
+}
+
+.lpl__header {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+  padding-left: 60px;
+}
+
+.lpl__header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+}
+
+.lpl__header-content {
+  position: relative;
+  z-index:1;
+  text-align: left;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 60px;
+}
+
+.lpl__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-family: 'Times New Roman', serif;
+  font-style: italic;
+}
+
+.lpl__subtitle {
+  font-size: 1.15rem;
+  margin-top: 0;
+}
+
+.lpl__form-container {
+  position: relative;
+  width: 100%;
+  max-width: 1020px;
+  margin: -80px auto 50px;
+  background-color: white;
+  border-radius: 6px;
+  padding: 30px 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.lpl__form-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #001756;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.lpl__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.lpl__form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.lpl__input, .lpl__textarea, .lpl__dropdown-input {
+  flex: 1;
+  padding: 14px 16px;
+  font-size: 14px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  transition: border-color 0.3s;
+  color: #555;
+}
+
+.lpl__input::placeholder, .lpl__textarea::placeholder, .lpl__dropdown-input::placeholder {
+  color: #999;
+}
+
+.lpl__input:focus, .lpl__textarea:focus, .lpl__dropdown-input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.lpl__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.lpl__dropdown {
+  position: relative;
+  flex: 1;
+}
+
+.lpl__dropdown-header {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.lpl__dropdown-input {
+  cursor: pointer;
+  background-color: white;
+  padding-right: 30px;
+  width: 100%;
+}
+
+.lpl__dropdown-arrow {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #999;
+  pointer-events: none;
+}
+
+.lpl__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #e0e0e0;
+}
+
+.lpl__dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  color: #555;
+}
+
+.lpl__dropdown-item:hover {
+  background-color: #f8f8f8;
+}
+
+.lpl__checkbox-row {
+  display: flex;
+  align-items: center;
+  margin-top: -5px;
+}
+
+.lpl__checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #777;
+  font-size: 14px;
+}
+
+.lpl__checkbox {
+  margin-right: 8px;
+  width: 16px;
+  height: 16px;
+}
+
+.lpl__form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.lpl__button {
+  padding: 12px 40px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.lpl__button-primary {
+  background-color: #001756;
+  color: white;
+}
+
+.lpl__button-primary:hover {
+  background-color: #000f38;
+}
+
+.lpl__button-secondary {
+  background-color: #001756;
+  color: white;
+}
+
+.lpl__button-secondary:hover {
+  background-color: #000f38;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .lpl__form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .lpl__form-container {
+    margin: -40px 20px 30px;
+    padding: 20px;
+  }
+  
+  .lpl__header-content {
+    padding-left: 20px;
+  }
+  
+  .lpl__form-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .lpl__button {
+    width: 100%;
+  }
+}
