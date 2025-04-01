@@ -1,0 +1,19 @@
+.logout-button {
+    background-color: #0c0c44;
+    color: white;
+    border: none;
+    padding: 12px 24px; /* Slightly adjusted for better spacing */
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block; /* More natural button sizing */
+    text-align: center;
+    margin-top: 50px; /* Increased margin-top to move the button down */
+    height: 50px; /* Reduced height */
+}
+
+.logout-button:hover {
+    background-color: #0c0c44;
+}
+

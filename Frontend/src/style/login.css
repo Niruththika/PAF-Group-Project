@@ -9,6 +9,7 @@ body {
     background-color: #ffffff;
     overflow: hidden;
     height: 100%;
+    overflow: auto;
 }
 
 .container {
@@ -225,3 +226,115 @@ p a {
     box-shadow: inset 4px 4px 8px #b8b8b8, inset -4px -4px 8px #ffffff;
     transform: translateY(2px); 
 }
+/* Scrollable image section */
+.scroll-container {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px 0;
+  }
+  
+  .scroll-content {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .scroll-image {
+    width: 100vw; /* Full width of the viewport */
+    height: auto;
+    object-fit: cover;
+  }
+
+  
+  /* Main container holding everything */
+.lcontainer {
+    display: flex;
+    flex-direction: column; /* Stack header on top and main content below */
+    height: 100vh;
+  }
+  
+  /* Header section */
+  .lheader {
+    background-color: #0c0c44;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .lheader .logo img {
+    width: 100px; /* Logo size */
+  }
+  
+  .lheader h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 48px;
+  }
+  
+  /* Main content section (below the header) */
+  .lmain-content {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1; /* Ensures it takes up the remaining height */
+  }
+  
+  .lleft-side {
+    width: 40%; /* Adjust the width of the left side */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    background-color: #f4f4f4; /* Optional, for better contrast */
+  }
+  
+  .lleft-side p {
+    margin-bottom: 20px;
+  }
+  
+  .llogin-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .llogin-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .slider {
+    position: relative;
+    width: 60%; /* Adjust the width of the image slider */
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .slider-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+  
+  .slider-image.active {
+    opacity: 1;
+  }
+  .lleft-side p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Dark text color for readability */
+    font-family: 'Arial', sans-serif; /* You can change to a preferred font */
+  }
+  
+  .lleft-side p:last-child {
+    margin-bottom: 0; /* Remove margin for the last paragraph */
+  }

@@ -13,6 +13,7 @@ import image6 from '../images/1.png';
 import image7 from '../images/3.png';
 import image8 from '../images/2.png';
 import Header from "./header";
+import Logout from "./logoutbutton"
 
 const PostPage = () => {
   const navigate = useNavigate();
@@ -280,9 +281,10 @@ const PostPage = () => {
      
         
         <Header/>
-     
+    
 
       <div className="content">
+    
         <div className="add-post-container">
           <button className="add-post-button" onClick={handleOpenForm}>
             Add New Post
@@ -434,6 +436,9 @@ const PostPage = () => {
               ))}
             </ul>
           </div>
+          <div>
+<Logout/>
+</div>
         </aside>
 
         <main className="posts">
